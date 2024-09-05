@@ -1,15 +1,14 @@
-import sumar from "./sumador";
+import ejecutarComandos from "./simulador.js";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const inputComandos = document.querySelector("#input-comandos");
+const form = document.querySelector("#ejecutar-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const comandos = inputComandos.value;
+  const resultado = ejecutarComandos(comandos);
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = `<p>Posición Final: ${resultado}</p>`;
 });

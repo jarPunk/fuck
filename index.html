@@ -1,15 +1,19 @@
-<html>
-  <body>
-    <h1>Sumador</h1>
-    <form id="sumar-form">
-      <label for="primer-numero">Primer número:</label>
-      <input type="number" id="primer-numero" />
-      <label for="segundo-numero">Segundo número:</label>
-      <input type="number" id="segundo-numero" />
-      <input type="submit" value="Sumar" id="sumar-button" />
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Autitos</title>
+</head>
+<body>
+    <h1>Simulador de Autitos</h1>
+    <form id="ejecutar-form">
+        <label for="input-comandos">Comandos:</label>
+        <input type="text" id="input-comandos" placeholder="Ej: 5,5/1,2N/IAIAIAIAA" required>
+        <button type="submit">Ejecutar</button>
     </form>
     <div id="resultado-div"></div>
 
-    <script type="module" src="./src/presenter.js"></script>
-  </body>
+    <script src="./src/presenter.js" type="module"></script>
+</body>
 </html>
